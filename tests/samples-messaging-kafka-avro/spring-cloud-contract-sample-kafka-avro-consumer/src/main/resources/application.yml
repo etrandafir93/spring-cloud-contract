@@ -1,5 +1,5 @@
 spring:
-  application-name: kafka-avro-producer
+  application-name: kafka-avro-consumer
   kafka:
     bootstrap-servers: localhost:9092
     producer:

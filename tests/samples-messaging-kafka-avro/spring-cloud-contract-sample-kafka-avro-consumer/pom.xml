@@ -10,10 +10,11 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>spring-cloud-contract-sample-kafka-avro-producer</artifactId>
+	<artifactId>spring-cloud-contract-sample-kafka-avro-consumer</artifactId>
 	<packaging>jar</packaging>
-	<name>Spring Cloud Contract Sample Kafka Avro Producer</name>
-	<description>Spring Cloud Contract Sample Kafka Avro Producer</description>
+	<name>Spring Cloud Contract Sample Kafka Avro Consumer</name>
+	<description>Spring Cloud Contract Sample Kafka Avro Consumer</description>
+
 
 	<dependencies>
 		<dependency>
@@ -43,7 +44,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-contract-verifier</artifactId>
+			<artifactId>spring-cloud-starter-contract-stub-runner</artifactId>
 			<scope>test</scope>
 		</dependency>
 
@@ -66,15 +67,6 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-contract-maven-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<testFramework>JUNIT5</testFramework>
-					<baseClassForTests>com.example.kafka.producer.BaseClass</baseClassForTests>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

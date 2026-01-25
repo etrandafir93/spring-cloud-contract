@@ -114,7 +114,7 @@ class BaseClass {
 			}
 		}
 
-		@KafkaListener(groupId = "testListener", topics = { "book.returned" })
+		@KafkaListener(topics = { "book.returned" })
 		public void listen(ConsumerRecord<?, ?> payload, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic) {
 			Map<String, Object> headers = new HashMap<>();
 			new JsonKafkaHeaderMapper().toHeaders(payload.headers(), headers);
