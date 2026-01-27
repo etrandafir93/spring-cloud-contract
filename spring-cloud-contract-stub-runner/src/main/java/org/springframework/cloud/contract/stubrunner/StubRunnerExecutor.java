@@ -242,7 +242,7 @@ class StubRunnerExecutor implements StubFinder {
 		return labels;
 	}
 
-	private void sendMessage(Contract groovyDsl) {
+	void sendMessage(Contract groovyDsl) {
 		OutputMessage outputMessage = groovyDsl.getOutputMessage();
 		DslProperty<?> body = outputMessage.getBody();
 		Headers headers = outputMessage.getHeaders();
